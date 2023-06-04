@@ -1,0 +1,11 @@
+DELETE FROM student;
+INSERT INTO student VALUES(1,'辻森',60);
+INSERT INTO student VALUES(2,'桜井',100);
+INSERT INTO student VALUES(3,'田原',85);
+INSERT INTO student VALUES(4,'中川',90);
+INSERT INTO student VALUES(5,'鈴木',75);
+INSERT INTO student VALUES(6,'小林',95);
+INSERT INTO student VALUES(7,'藤原',90);
+INSERT INTO student VALUES(8,'草野',85);
+INSERT INTO student VALUES(9,'常田',80);
+INSERT INTO student VALUES(10,'小橋',75);
