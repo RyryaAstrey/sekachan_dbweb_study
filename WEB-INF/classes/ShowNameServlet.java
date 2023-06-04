@@ -6,7 +6,7 @@ import javax.servlet.annotation.*;
 
 @WebServlet("/showname")
 public class ShowNameServlet extends HttpServlet {
-    public void doPost(HttpServletRequest req, HttpServletResponce res)
+    public void doPost(HttpServletRequest req, HttpServletResponse res)
         throws IOException, ServletException {
             final String URL = "jdbc:mysql://localhost/sampledb";
             final String USER = "root";
@@ -41,11 +41,11 @@ public class ShowNameServlet extends HttpServlet {
                 }
             }
             //JSPにフォワード
-            RequestDispattcher rd = req.getRequestDsipatcher("/showname.jsp");
+            RequestDispatcher rd = req.getRequestDispatcher("/showname.jsp");
             rd.forward(req, res);
         }
 
-        public void doGet(HttpServletRequest req, HttpServletResponce res)
+        public void doGet(HttpServletRequest req, HttpServletResponse res)
             throws IOException, ServletException {
                 doPost(req, res);
             }
