@@ -1,11 +1,9 @@
 import java.io.*;
-import java.rmi.server.ServerCloneException;
-
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
-@WebServlet("/shoname2")
+@WebServlet("/showname2")
 public class ShowNameServlet2 extends HttpServlet {
     public void doPost(HttpServletRequest req, HttpServletResponse res)
         throws IOException, ServletException {
@@ -17,6 +15,7 @@ public class ShowNameServlet2 extends HttpServlet {
             req.setAttribute("name", name);
             //JSPにフォワード
             RequestDispatcher rd = req.getRequestDispatcher("/showname2.jsp");
+            rd.forward(req, res);
         }
 
         public void doGet(HttpServletRequest req, HttpServletResponse res)
