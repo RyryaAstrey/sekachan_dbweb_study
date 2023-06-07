@@ -13,8 +13,8 @@ public class ShoStudentsServlet extends HttpServlet {
             //全件検索した結果をDTOオブジェクトとして取得
             StudentDTO sdto = sdao.select();
             //JSPにフォワード
-            REquestDispatcher rd = req.getRequestDispatcher("/showstudents.jsp");
-            rd.forward(re1, res);
+            RequestDispatcher rd = req.getRequestDispatcher("/showstudents.jsp");
+            rd.forward(req, res);
         }
 
         public void doGet(HttpServletRequest req, HttpServletResponse res)
