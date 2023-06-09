@@ -18,7 +18,7 @@ public class EditStudentServlet extends HttpServlet {
             if(btn.equals("追加")) {
                 int no = Integer.parseInt(req.getParameter("no"));
                 String name = req.getParameter("name");
-                int score = Integer.ParseInt(req.getParameter("score"));
+                int score = Integer.parseInt(req.getParameter("score"));
                 sdao.insert(no, name, score);
                 msg = "番号" + no + "の生徒を追加しました";
             } else if(btn.equals("修正")) {
@@ -33,7 +33,7 @@ public class EditStudentServlet extends HttpServlet {
                 msg = "番号" + no + "の生徒を削除しました";
             }
             //全件検索
-            StudentDTO sdto sdao.select();
+            StudentDTO sdto = sdao.select();
             //リクエストスコープにDTOとmsgを格納
             req.setAttribute("sdto", sdto);
             req.setAttribute("msg", msg);
