@@ -4,7 +4,7 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import bean.StudentDTO;
 
-@WebServlet("/showStudents")
+@WebServlet("/editStudent")
 public class EditStudentServlet extends HttpServlet {
     public void doPost(HttpServletRequest req, HttpServletResponse res)
         throws IOException, ServletException {
